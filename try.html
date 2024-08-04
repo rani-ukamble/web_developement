@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Example</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+      <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 70%;
+            height: 250px;
+            padding: 10px;
+            background-color: rgb(238, 210, 230);
+            margin-left: 40px;
+        }
+
+
+        .column2 {
+            float: left;
+            width: 20%;
+            height: 250px;
+            padding: 0px;
+            background-color: rgb(248, 250, 251);
+            margin-left: 40px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+
+        }
+
+        .d1 {
+            border-radius: 50px 10px 50px 10px;
+            border: solid;
+            border-color: blueviolet;
+            box-shadow: 10px 10px lightblue;
+        }
+
+        .d2 {
+            border-radius: 10px 50px 10px 50px;
+            border: solid;
+            border-color: blueviolet;
+            box-shadow: 10px 10px lightblue;
+        }
+
+        div.relative {
+            background-color: rgb(175, 175, 231);
+            position: relative;
+            left: 150px;
+            width: 400px;
+            height: 200px;
+            border: 3px solid #73AD21;
+          } 
+          
+          div.absolute {
+            background-color: rgb(201, 166, 183);
+
+            position: absolute;
+            top: 100px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #73AD21;
+          }
+
+
+
+ 
+
+    </style>
+</head>
+
+<body>
+
+    <div class="relative">This div element has position: relative;
+        <div class="absolute">This div element has position: absolute;</div>
+      </div>
+
+    <div class="dropdown-container">
+        <div class="dropdown">
+            <button class="dropbtn">Mathematics</button>
+            <div class="dropdown-content">
+                <a href="#">Algebra</a>
+                <a href="#">Geometry</a>
+                <a href="#">Calculus</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Science</button>
+            <div class="dropdown-content">
+                <a href="#">Physics</a>
+                <a href="#">Chemistry</a>
+                <a href="#">Biology</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">History</button>
+            <div class="dropdown-content">
+                <a href="#">Ancient</a>
+                <a href="#">Medieval</a>
+                <a href="#">Modern</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <br> <br>
+
+    
+
+    <br>
+
+
+
+    <br><br>
+
+    <div class="outer">
+
+        <div class="d1">I am div</div>
+        <div class="d2">I am div</div>
+    </div>
+
+    <div class="d3">
+        <b>Hello!!!!</b> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sunt dolorum itaque
+        quas vitae fugiat, id explicabo perspiciatis commodi? Dolores corrupti accusantium laudantium praesentium cum.
+        Reprehenderit necessitatibus esse recusandae fugiat laudantium! Molestiae facere distinctio earum quia
+        architecto sequi qui dolorum, nisi quisquam in sunt animi quae facilis ducimus accusantium consequatur.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio sunt et repudiandae soluta molestias odit
+        impedit molestiae. Deleniti quae ut veritatis et dicta! Illum numquam autem, ut dolorum, quisquam commodi
+        facilis modi dignissimos itaque dolor suscipit magnam soluta odit maiores facere cupiditate error accusamus
+        distinctio explicabo asperiores. Nisi, quod vel dolor laborum fuga accusantium quibusdam odit assumenda magni
+        alias quo modi aliquam ipsum sunt eum deleniti tempore nulla quaerat illo possimus sint? Officia placeat animi
+        consectetur eaque saepe, ipsum libero maxime odio corrupti nostrum temporibus expedita ducimus beatae aut vero.
+        Mollitia at aperiam corrupti, accusamus necessitatibus iusto omnis officia repellat dolores minus nihil saepe
+        doloremque soluta, illum voluptate eveniet, quae temporibus nobis! Molestiae libero sapiente enim quod commodi
+        culpa nulla alias ea aperiam quibusdam. Delectus molestiae odio nesciunt enim architecto doloremque modi? Ad
+        vitae dignissimos laudantium maxime possimus, laboriosam at eius id cupiditate accusantium excepturi atque fugit
+        fuga amet? Illo.
+    </div>
+
+
+    <div class="newer" id="container">
+        <div class="left-box" id="leftBox">
+            This is a box on the left side.
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row">
+        <div class="column" id="c2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus sunt amet ad laudantium dolor. Aut
+            debitis voluptatem officia accusantium perferendis!
+        </div>
+
+        <div class="column2" id="c1">
+            <img src="buddha.jpeg" alt="buddha" style="height:100%">
+        </div>
+    </div>
+
+
+
+
+
+    
+    <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="https://drive.google.com/file/d/1nvaFnk6JovBrGKcI_3uvu5JnRpCTT1Vo/view?usp=drive_link">Resume</a>
+          </li>
+          <li><a href="#services">Projects</a></li>
+          <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Useful Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Your Company | Designed by YourName
+        </div>
+    </footer>
+
+
+
+    <!-- Include external script -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

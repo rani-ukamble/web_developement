@@ -1,71 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <title>Portfolio</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <style>
+
+
+        body {
+            font-family: "Open Sans", sans-serif;
+            background-color: #040404;
+            color: #fff;
+            position: relative;
+            background: transparent;
+          }
+          
+          body::before {
+            content: "";
+            position: fixed;
+            
+            /* background: #040404 url("../img/bg.jpg") top right no-repeat; */
+            /* background: #040404 url("../img/h3.jpg") top right no-repeat; */
+            background: linear-gradient(rgba(34, 0, 44, 0.635),rgba(2, 2, 2, 0.837)), url("../img/s9.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+          
+            left: 0;
+            right: 0;
+            top: 0;
+           
+            height: 100vh;
+          
+            z-index: -1;
+          }
+          
+          @media (min-width: 1024px) {
+            body::before {
+              background-attachment: fixed;
+            }
+          }
+          
+          a {
+            color: #18d26e;
+          }
+          
+          a:hover {
+            color: #35e888;
+            text-decoration: none;
+          }
+          
+          h1, h2, h3, h4, h5, h6 {
+            font-family: "Raleway", sans-serif;
+          }
+          
+          /*--------------------------------------------------------------
+          # Header
+          --------------------------------------------------------------*/
+          #header {
+            transition: ease-in-out 0.3s;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            z-index: 997;
+            overflow-y: auto;
+          }
+          
+          #header * {
+            transition: ease-in-out 0.3s;
+          }
+          
+          #header h1 {
+            font-size: 48px;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            font-weight: 700;
+            font-family: "Poppins", sans-serif;
+          }
+          
+          #header h1 a, #header h1 a:hover {
+            color: #fff;
+            line-height: 1;
+            display: inline-block;
+          }
+          
+          #header h2 {
+            font-size: 24px;
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.8);
+          }
+          
+          #header h2 span {
+            color: #fff;
+            border-bottom: 2px solid #18d26e;
+            padding-bottom: 6px;
+          }
+          
+          #header img {
+            padding: 0;
+            margin: 0;
+          }
+          
+          #header .social-links {
+            margin-top: 40px;
+            display: flex;
+          }
+          
+          #header .social-links a {
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            line-height: 1;
+            margin-right: 8px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+          }
+          
+          #header .social-links a:hover {
+            background: #18d26e;
+          }
+          
+          @media (max-width: 992px) {
+            #header h1 {
+              font-size: 36px;
+            }
+            #header h2 {
+              font-size: 20px;
+              line-height: 30px;
+            }
+            #header .social-links {
+              margin-top: 15px;
+            }
+            #header .container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+          }
+          
+        /* Desktop Navigation */
+        .nav-menu {
+            margin-top: 0; /* Adjust as needed */
+            margin-left: 0; /* Adjust as needed */
+            background-color: #333; /* Ensure visibility */
+        }
+      
+        .nav-menu ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+      
+        .nav-menu li + li {
+            margin-left: 30px;
+        }
+      
+        .nav-menu a {
+            display: block;
+            position: relative;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            padding: 10px 15px; /* Add padding for better click area */
+            text-decoration: none;
+        }
+      
+        .nav-menu a:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #123e1f;
+            visibility: hidden;
+            width: 0px;
+            transition: all 0.3s ease-in-out 0s;
+        }
+      
+        .nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+            visibility: visible;
+            width: 25px;
+        }
+      
+        .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+            color: #fff;
+        }
+      
+        /* Mobile Navigation */
+        .mobile-nav-toggle {
+            position: fixed;
+            right: 15px;
+            top: 15px;
+            z-index: 9998;
+            border: 0;
+            background: none;
+            font-size: 24px;
+            transition: all 0.4s;
+            outline: none !important;
+            line-height: 1;
+            cursor: pointer;
+            text-align: right;
+        }
+      
+        .mobile-nav-toggle i {
+            color: #fff;
+        }
+      
+        .mobile-nav {
+            position: fixed;
+            top: 55px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            z-index: 9999;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.7);
+            transition: ease-in-out 0.2s;
+            opacity: 0;
+            visibility: hidden;
+            border-radius: 10px;
+            padding: 10px 0;
+            border: 2px solid rgba(255, 255, 255, 0.12);
+        }
+      
+        .mobile-nav * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+      
+        .mobile-nav a {
+            display: block;
+            position: relative;
+            color: #fff;
+            padding: 10px 20px;
+            font-weight: 500;
+            outline: none;
+        }
+      
+        .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+            color: #18d26e;
+        }
+      
+        .mobile-nav-overly {
+            width: 100%;
+            height: 100%;
+            z-index: 9997;
+            top: 0;
+            left: 0;
+            position: fixed;
+            background: rgba(9, 9, 9, 0.6);
+            overflow: hidden;
+            display: none;
+            transition: ease-in-out 0.2s;
+        }
+      
+        .mobile-nav-active {
+            overflow: hidden;
+        }
+      
+        .mobile-nav-active .mobile-nav {
+            opacity: 1;
+            visibility: visible;
+        }
+      
+        .mobile-nav-active .mobile-nav-toggle i {
+            color: #fff;
+        }
+
+        /* Section Styling */
+        .n1 {
+            background-image: linear-gradient(rgba(3,6,25,0.7), rgba(3,6,25,0.7)), url('static/images/a1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            position: relative;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #000; /* Ensure visibility */
+        }
+
+        .navbar h1 {
+            color: white;
+            margin: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            position: relative;
+        }
+
+        .navbar a:hover {
+            color: #ffdd40;
+        }
+
+        .navbar a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 0;
+            background: #ffdd40;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+    </style>
 </head>
-
-<body background="img/R.jpg" height="5000px">
-
-    <table border="0" height="700px" width="100%">
-        <tr>
-            <th> <font face="WildWest">Web developement</font>
-                </th>
-            <th></th>
-            <th></th>
-            <th><a href="#">Home</a></th>
-            <th><a href="#">About us</a> </th>
-            <th><a href="#">Contact</a></th>
-
-        </tr>
-
-        <tr>
-            <th colspan="6">
-                <font color="white" face="verdana" size="5">
-                    <h1>Welcome to my website</h1><br>
-                    <h2>www.rk.com</h2>
-                </font>
-            </th>
-
-        </tr>
-
-        <tr>
-            <th colspan="6">
-                <font size="5" color="red">Subscribe now</font>
-            </th>
-
-        </tr>
-
-        <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-
-        <tr>
-            <th colspan="6">
-                <font color="black">Thanks for visiting</font>
-            </th>
-
-        </tr>
-
-        <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </table>
-
+<body>
+    <nav class="navbar">
+        <h1>My Portfolio</h1>
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li class="active"><a href="#header">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="https://drive.google.com/file/d/1nvaFnk6JovBrGKcI_3uvu5JnRpCTT1Vo/view?usp=drive_link">Resume</a></li>
+              <li><a href="#services">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+    </nav><!-- .navbar -->
 </body>
-
 </html>
